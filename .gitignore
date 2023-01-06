@@ -1,0 +1,4 @@
+/bazel-bin
+/bazel-out
+/bazel-static_linkstatic_fiasco
+/bazel-testlogs
