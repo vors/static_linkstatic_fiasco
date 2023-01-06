@@ -1,6 +1,6 @@
 # Static LinkStatic Fiasco
 
-If we mix `dlopen` of 2 libraries that share a dependency, but one of the libraries uses `linkstatic = True` we a bug:
+If we mix `dlopen` of 2 libraries that share a dependency, but one of the libraries uses `linkstatic = True` we hit a bug:
 
 Not very surprisingly we double-initialize static field
 
@@ -9,7 +9,7 @@ Not very surprisingly we double-initialize static field
 static std::vector<int> v;
 ```
 
-Repro `bazelist run //:demo`
+Repro `bazelisk run //:demo`
 
 Result:
 
